@@ -39,17 +39,6 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 
 
 ## Configuration: 
-- Page Table &emsp; &emsp; &emsp;: 256 entries
-- TLB &emsp; &emsp; &emsp; &emsp; &emsp;: 16  entries
-- Frame  &emsp; &emsp; &emsp;: 256  
-- Frame Size  &emsp; &emsp; &emsp;: 256 bytes
-- Data &emsp; &emsp; &emsp;: Signed Integer
-- Page Table and TLB Entry: 
-- Physical Memory &emsp; &emsp;: 2D Array (Dimension: Frame x Frame Size)
-- TLB & Page Table  &emsp;: Array 
-- BackingStore  &emsp; : Binary File (BACKING_STORE.bin)
-- Input && Output File  &emsp; : addresses.txt && output.txt
-
 - Page Table&nbsp;&nbsp;&nbsp;&nbsp;: 256 entries  
 - TLB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 16 entries  
 - Frame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 256  
