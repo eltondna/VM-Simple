@@ -22,7 +22,9 @@ The program read from a file containing logical addresses, using TLB , Page Tabl
 
     - Page Fault: Read the data from the binary to the Physical Memory
 
-https://user-images.githubusercontent.com/32425672/36358889-ee1b5380-14c9-11e8-9f5d-4df9de38a156.png
+![Paging Process](https://user-images.githubusercontent.com/32425672/36358889-ee1b5380-14c9-11e8-9f5d-4df9de38a156.png)
+![Program Process](https://user-images.githubusercontent.com/32425672/36358891-f2f32bbc-14c9-11e8-80b0-f42b602007c2.png)
+
 
 To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard drive that can be accessed randomly. Data are aligned according to page number. Therefore using page number as index, a whole frame could be read and allocated to the physical memory. After that, page table and TLB is updated and data are acquired using offset.
 
