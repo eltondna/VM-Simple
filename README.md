@@ -41,7 +41,11 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 - Input && Output File  : addresses.txt && output.txt
 
 ## Page Replacement Algorithm 
-Since all logical addresses are less than 256, there are sufficient places for the page table to loaded all pages into the physical memory. Therefore the replacement algorithms are demonstrated in the TLB. 3 algorithms are implemented: FIFO, LRU 8 Reference Bits, LRU Clock Replacement.
+Since all logical addresses are less than 256, there are sufficient places for the page table to loaded all pages into the physical memory. Therefore the replacement algorithms are demonstrated in the TLB.
+3 algorithms are implemented: 
+- FIFO
+- LRU 8 Reference Bits
+- LRU Clock Replacement.
 
 
 ## Output: 
