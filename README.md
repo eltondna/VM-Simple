@@ -55,7 +55,7 @@ Since all logical addresses are less than 256, there are sufficient places for t
 3 algorithms are implemented: 
 - FIFO
 - LRU 8 Reference Bits
-- LRU Clock Replacement.
+- LRU Clock Replacement
 
 ## To Run
     g++ self.cpp
