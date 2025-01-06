@@ -44,7 +44,7 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 - Frame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 256  
 - Frame Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 256 bytes  
 - Data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Signed Integer  
-- Page Table Entry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: [Entry format specification]
+- Page Table Entry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: [struct {int page_number; int frame_number; };]
 - Physical Memory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2D Array (Dimension: Frame x Frame Size)  
 - TLB & Page Table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Array  
 - Backing Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Binary File (BACKING_STORE.bin)  
