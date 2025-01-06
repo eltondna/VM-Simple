@@ -74,4 +74,3 @@ Since all logical addresses are less than 256, there are sufficient places for t
     Page Fault Rate: 0.244
     TLB Hits: 60
     TLB Hits Rate: 0.06
-    TLB index: 16

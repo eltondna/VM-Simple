@@ -273,7 +273,7 @@ int main(int argc, char const *argv[])
     }
     cout << "Page Replacement Algorithm: " << mode << endl;
     cout << "Number of translated address: " << translated_address << endl;
-    
+
     double pfRate = pageFault / (double) translated_address;
     double TLBRate = TLBHit / (double) translated_address;
 
@@ -281,7 +281,6 @@ int main(int argc, char const *argv[])
     cout << "Page Fault Rate: " << pfRate << endl;
     cout << "TLB Hits: " << TLBHit << endl;
     cout << "TLB Hits Rate: " << TLBRate << endl;
-    cout << "TLB index: " << TLB_index << endl;
 
     fclose(stream);
     close(backing_store_fd);
