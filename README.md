@@ -55,12 +55,24 @@ Since all logical addresses are less than 256, there are sufficient places for t
     gcc main.c
     ./a.out addresses.txt
 
-## Terminal Output: 
-    Logical Address : xx Physical Address: xx Value: xx
-    Page Number 
-    Frame Number
-    Offset
-    Page Fault
-    Page Fault Rate 
-    TLB Hit 
-    TLB Hit Rate
+## Example Output: 
+    ./a.out addresses.txt -l
+
+    ...
+    WELCOME TO VIRTUAL MEMORY MANAGER
+    Result is outputed to the result.txt file
+    Algorithm: FIFO [-f], LRU [-l], CLOCK [-c]
+
+    Page Number: 47
+    Frame Number: 10
+    Offset: 75
+    Virtual Address: 12107 Physical Address: 2635 Value: -46
+
+    Page Replacement Algorithm: LRU
+    Number of translated address: 1000
+    Page Fault: 244
+    Page Fault Rate: 0.244
+    TLB Hits: 60
+    TLB Hits Rate: 0.06
+    TLB index: 16
+    ...
