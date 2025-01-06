@@ -50,6 +50,7 @@ string mode;
 // File Descriptor 
 int address_fd;
 int backing_store_fd;
+int result_fd;
 
 // Statistic Data
 int pageFault = 0;
@@ -93,6 +94,8 @@ void get_page(int logical_address){
 
     value = RAM[frameNumber][offset];
 
+
+
     cout << "Page Number: "  << pageNumber  << '\n'
          << "Frame Number: " << frameNumber << '\n'
          << "Offset: "       << offset      << '\n';
@@ -100,6 +103,12 @@ void get_page(int logical_address){
     cout << "Virtual Address: "   << logical_address 
          << " Physical Address: " << ((frameNumber << 8) | offset)
          << " Value: "            << value << '\n' << endl;
+
+    char buf[256]; 
+    int cNum = snprintf(buf, sizeof(buf), "Virtual Address: %u Physical Address: %u Value: %d\n", 
+             logical_address, ((frameNumber << 8) | offset), value);
+    buf[cNum] = '\0';
+    write(result_fd, buf, strlen(buf));
 }
 
 
@@ -252,12 +261,16 @@ int main(int argc, char const *argv[])
 
     address_fd       = open(argv[1],O_RDONLY);
     backing_store_fd = open("BACKING_STORE.bin",O_RDONLY);
+    result_fd        = open("result.txt", O_RDWR);
 
     if (address_fd == -1)
-        cerr << "Error opening addresses.txt " << argv[1] << endl;
+        cerr << "Error opening addresses.txt" << argv[1] << endl;
         
     if (backing_store_fd == -1)
-        cerr << "Error opening BACKING_STORE.bin " << endl;
+        cerr << "Error opening BACKING_STORE.bin" << endl;
+    
+    if (result_fd == -1)
+        cerr << "Error opening result.txt" << endl;
 
     int translated_address = 0;
     int logical_address = 0;
