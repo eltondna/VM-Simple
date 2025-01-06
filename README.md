@@ -47,11 +47,11 @@ Since all logical addresses are less than 256, there are sufficient places for t
 - LRU 8 Reference Bits
 - LRU Clock Replacement.
 
-# To Run
+## To Run
     g++ self.cpp
     ./a.out [Input file] [Flag]
     Example: ./a.out addresses.txt -l
-or
+#### or
     gcc main.c
     ./a.out addresses.txt
 
