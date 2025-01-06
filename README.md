@@ -39,11 +39,12 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 
 
 ## Configuration: 
-- Page Table            : 256 entries
+- Page Table&nbsp;&nbsp;&nbsp;: 256 entries
 - TLB                   : 16  entries
 - Frame                 : 256  
 - Frame Size            : 256 bytes
 - Data                  : Signed Integer
+- Page Table and TLB Entry: 
 - Physical Memory       : 2D Array (Dimension: Frame x Frame Size)
 - TLB & Page Table      : Array 
 - BackingStore          : Binary File (BACKING_STORE.bin)
