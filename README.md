@@ -39,7 +39,7 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 
 
 ## Configuration: 
-- Page Table&nbsp;&nbsp;&nbsp;: 256 entries
+- Page Table&emsp;: 256 entries
 - TLB                   : 16  entries
 - Frame                 : 256  
 - Frame Size            : 256 bytes
