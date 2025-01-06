@@ -4,6 +4,15 @@ A Virtual Memory Manager translates logical address to physical address.
 
 The program read from a file containing logical addresses, using TLB , Page Table to tanslate each logical address to its physical address and output the value of the byte stored at the translated physical address in the binary file.
 
+DISCLAIMER:
+
+many code segments is taken from this repository https://github.com/MagedSaeed/vertual_memroy_manager/blob/master/main.c.
+
+This repository is initiated to deepen my knowledge in Virtual Memory and Paging Algorithm as a OS enthusiast.
+Feel free to comment and ask for clarity on the implementation!
+
+Thank you @malcium and @MagedSaeed :)
+
 ## Background & Problem Description: 
 - The virtual memory manager simulates the process of logical to physical address translation
 - Logical Address  : Page Number  +  Offset
