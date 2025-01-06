@@ -48,7 +48,7 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
 - Physical Memory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2D Array (Dimension: Frame x Frame Size)  
 - TLB & Page Table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Array  
 - Backing Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Binary File (BACKING_STORE.bin)  
-- Input & Output File&nbsp;&nbsp;&nbsp;: addresses.txt && output.txt
+- Input & Result File&nbsp;&nbsp;&nbsp;: addresses.txt && output.txt
 
 ## Page Replacement Algorithm 
 Since all logical addresses are less than 256, there are sufficient places for the page table to loaded all pages into the physical memory. Therefore the replacement algorithms are demonstrated in the TLB.
