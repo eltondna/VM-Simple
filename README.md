@@ -47,14 +47,16 @@ Since all logical addresses are less than 256, there are sufficient places for t
 - LRU 8 Reference Bits
 - LRU Clock Replacement.
 
+# To Run
+    - g++ self.cpp
+    - ./a.out addresses.txt
 
-## Output: 
-- Logical Address
-- Physical Address
-- Offset
-- Page Number 
-- Frame Number
-- Page Fault
-- Page Fault Rate 
-- TLB Hit 
-- TLB Hit Rate
+## Terminal Output: 
+    - Logical Address : xx Physical Address: xx Value: xx
+    - Page Number 
+    - Frame Number
+    - Offset
+    - Page Fault
+    - Page Fault Rate 
+    - TLB Hit 
+    - TLB Hit Rate
