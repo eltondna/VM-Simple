@@ -45,6 +45,8 @@ uint8_t referenceBytes[TLB_SIZE];
 void SecondChance(int pageNumber, int frameNumber);
 bool referenceBits[TLB_SIZE];
 
+string mode;
+
 // File Descriptor 
 int address_fd;
 int backing_store_fd;
@@ -83,7 +85,12 @@ void get_page(int logical_address){
             pageFault++;
         }
     }
-    SecondChance(pageNumber,frameNumber);
+    if (mode.compare("LRU") == 0) 
+        LRU8Bit(pageNumber, frameNumber);
+    else if (mode.compare("CLOCK") == 0) 
+        SecondChance(pageNumber,frameNumber);
+    else FIFO(pageNumber, frameNumber);
+
     value = RAM[frameNumber][offset];
 
     cout << "Page Number: "  << pageNumber  << '\n'
@@ -229,10 +236,20 @@ int main(int argc, char const *argv[])
 {
     cout << "WELCOME TO VIRTUAL MEMORY MANAGER" << endl;
     cout << "Result is outputed to the result.txt file" << endl;
+    cout << "Algorithm: FIFO [-f], LRU [-l], CLOCK [-c]" << endl;
 
-    if (argc != 2)
-        cerr << "Usage: ./a.out [input file]" << endl;
+    if (argc == 3){
+        mode = (strcasecmp(argv[2], "-f") == 0) ? "FIFO" :
+               (strcasecmp(argv[2], "-l") == 0) ? "LRU"  :
+               (strcasecmp(argv[2], "-c") == 0) ? "CLOCK": "";
+        if (mode == "") 
+            cerr << "Invalid Flag" << endl;
+
+    }else if (argc < 2)
+        cerr << "Usage: ./a.out [input file] [flag: optional]" << endl;
     
+
+
     address_fd       = open(argv[1],O_RDONLY);
     backing_store_fd = open("BACKING_STORE.bin",O_RDONLY);
 
@@ -254,8 +271,9 @@ int main(int argc, char const *argv[])
         get_page(logical_address);
         translated_address++;
     }
-
+    cout << "Page Replacement Algorithm: " << mode << endl;
     cout << "Number of translated address: " << translated_address << endl;
+    
     double pfRate = pageFault / (double) translated_address;
     double TLBRate = TLBHit / (double) translated_address;
 
