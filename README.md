@@ -38,7 +38,7 @@ To handle the page fault, BACKING_STORE.bin is consulted. It represents a hard d
     - BackingStore          : Binary File (BACKING_STORE.bin)
     - Input && Output File  : addresses.txt && output.txt
 
-## Result and Analysis: 
+## Output: 
     - Logical Address
     - Physical Address
     - Offset
