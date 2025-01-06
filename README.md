@@ -58,10 +58,10 @@ Since all logical addresses are less than 256, there are sufficient places for t
 ## Example Output: 
     ./a.out addresses.txt -l
 
-    ...
     WELCOME TO VIRTUAL MEMORY MANAGER
     Result is outputed to the result.txt file
     Algorithm: FIFO [-f], LRU [-l], CLOCK [-c]
+    ...
 
     Page Number: 47
     Frame Number: 10
@@ -75,4 +75,3 @@ Since all logical addresses are less than 256, there are sufficient places for t
     TLB Hits: 60
     TLB Hits Rate: 0.06
     TLB index: 16
-    ...
