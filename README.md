@@ -49,7 +49,8 @@ Since all logical addresses are less than 256, there are sufficient places for t
 
 # To Run
     g++ self.cpp
-    ./a.out addresses.txt
+    ./a.out [Input file] [Flag]
+    Example: ./a.out addresses.txt -l
 
 ## Terminal Output: 
     Logical Address : xx Physical Address: xx Value: xx
